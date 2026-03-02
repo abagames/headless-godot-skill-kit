@@ -119,5 +119,5 @@ Web export
 
 ## References
 
-- Godot CLI tutorial: https://docs.godotengine.org/en/stable/tutorials/editor/command_line_tutorial.html
-- Godot export docs: https://docs.godotengine.org/en/stable/tutorials/export/exporting_projects.html
+- [Godot CLI tutorial](https://docs.godotengine.org/en/stable/tutorials/editor/command_line_tutorial.html)
+- [Godot export docs](https://docs.godotengine.org/en/stable/tutorials/export/exporting_projects.html)

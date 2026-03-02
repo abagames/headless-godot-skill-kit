@@ -119,5 +119,5 @@ Web エクスポート
 
 ## 参考リンク
 
-- [Godot CLI チュートリアル](https://docs.godotengine.org/en/4.4/tutorials/editor/command_line_tutorial.html)
+- [Godot CLI チュートリアル](https://docs.godotengine.org/ja/4.x/tutorials/editor/command_line_tutorial.html)
 - [Godot エクスポートガイド](https://docs.godotengine.org/ja/4.x/tutorials/export/exporting_projects.html)
