@@ -2,7 +2,7 @@
 
 English | [日本語](README_ja.md)
 
-An Agent Skill kit for developing Godot games without opening the Godot editor. It combines an AI coding agent with headless Godot to automate scene editing, tests, and exports so you can validate builds (e.g. Web export) in a browser.
+An agent skill kit for developing Godot games without opening the Godot editor. It combines an AI coding agent with headless Godot to automate scene editing, tests, and exports so you can validate builds (e.g. Web export) in a browser.
 
 ## Prerequisites
 
