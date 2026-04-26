@@ -1,0 +1,8 @@
+build/*
+!build/web/
+!build/web/**
+.godot/
+.tmp-godot-data/
+.tmp-godot-config/
+.tmp-godot-cache/
+logs/

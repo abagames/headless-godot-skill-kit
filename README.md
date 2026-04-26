@@ -19,6 +19,19 @@ cp -r /path/to/headless-godot-skill-kit/.agents /path/to/your-project/
 
 After that, tell the agent what you want to build or change. It can run scene edits, tests, and exports end-to-end. You can validate the exported Web build by opening `build/web/index.html` in a browser.
 
+## Optional Starter Template
+
+This repository also includes `templates/godot-base/`, an optional starter Godot project for creating a new game with this skill kit.
+
+Use it when starting a new project:
+
+```bash
+cp -r /path/to/headless-godot-skill-kit/templates/godot-base /path/to/your-new-project
+cp -r /path/to/headless-godot-skill-kit/.agents /path/to/your-new-project/
+```
+
+The starter template is not part of the `headless-godot` skill itself. Existing projects only need `.agents/`. See `templates/godot-base/TEMPLATE_SCOPE.md` for the template boundary: it should stay infrastructure-oriented and avoid locking in gameplay, visual identity, or audio identity.
+
 **Note:** This skill provides rules and reference material, but does not automatically define the agent's workflow. To have the agent run the full pipeline (patch → test → Web export) without manual prompting each time, add workflow instructions to your project's `AGENTS.md`. For example:
 
 ```markdown
@@ -115,6 +128,13 @@ Web export
       ├── godot_apply_patch.gd        # Patch applier script
       └── templates/
           └── run_tests.gd            # Test script template
+
+templates/godot-base/
+  ├── TEMPLATE_SCOPE.md               # Starter template boundaries
+  ├── project.godot                   # Minimal Godot project
+  ├── main.tscn / main.gd             # Replaceable game root
+  ├── tools/tests/run_tests.gd        # Template-specific test harness
+  └── web/custom_shell.html           # Web export shell
 ```
 
 ## References

@@ -19,6 +19,19 @@ cp -r /path/to/headless-godot-skill-kit/.agents /path/to/your-project/
 
 あとはエージェントに指示を出せば、シーン編集・テスト・エクスポートまで実行できる。エクスポートされた Web ビルド（`build/web/index.html`）をブラウザで確認する。
 
+## 任意のスターターテンプレート
+
+このリポジトリには、新規ゲームをこの Skill Kit で始めるための任意テンプレートとして `templates/godot-base/` も含まれる。
+
+新規プロジェクトを作る場合:
+
+```bash
+cp -r /path/to/headless-godot-skill-kit/templates/godot-base /path/to/your-new-project
+cp -r /path/to/headless-godot-skill-kit/.agents /path/to/your-new-project/
+```
+
+このスターターテンプレートは `headless-godot` スキル本体ではない。既存プロジェクトに導入する場合は `.agents/` だけをコピーすればよい。テンプレートの境界は `templates/godot-base/TEMPLATE_SCOPE.md` を参照すること。テンプレートはインフラ寄りに保ち、ゲームプレイ、ビジュアル identity、音 identity を固定しない。
+
 **注意:** このスキルはルールとリファレンスを提供するが、ワークフローの自動実行は定義していない。毎回の変更後にパイプライン（パッチ → テスト → Web エクスポート）を自動で回したい場合は、プロジェクトの `AGENTS.md` にワークフロー指示を追加する。例:
 
 ```markdown
@@ -115,6 +128,13 @@ Web エクスポート
       ├── godot_apply_patch.gd        # パッチ適用スクリプト本体
       └── templates/
           └── run_tests.gd            # テストスクリプトのテンプレート
+
+templates/godot-base/
+  ├── TEMPLATE_SCOPE.md               # スターターテンプレートの境界
+  ├── project.godot                   # 最小 Godot プロジェクト
+  ├── main.tscn / main.gd             # 置き換え前提のゲーム root
+  ├── tools/tests/run_tests.gd        # テンプレート固有のテストハーネス
+  └── web/custom_shell.html           # Web export shell
 ```
 
 ## 参考リンク
