@@ -1,0 +1,6 @@
+/logs/
+/evals/
+/.codex
+/.tmp-godot-data/
+/.tmp-godot-config/
+/.tmp-godot-cache/
